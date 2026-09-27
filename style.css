@@ -55,10 +55,17 @@ a {
 }
 
 .logo {
-    font-size: 21px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.logo img {
+    display: block;
+    width: 145px;
+    height: auto;
+    max-height: 58px;
+    object-fit: contain;
 }
 
 .navigation {
@@ -427,4 +434,20 @@ a {
         font-size: 13px;
     }
 
+}
+
+@media (max-width: 700px) {
+
+    .logo img {
+        width: 105px;
+        max-height: 48px;
+    }
+
+    .navigation {
+        gap: 12px;
+    }
+
+    .navigation a {
+        font-size: 11px;
+    }
 }
