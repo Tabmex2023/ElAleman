@@ -1,1 +1,1184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Eventos | El Alemán</title>
+
+<meta name="description" content="Eventos en El Alemán — Camarón Enmantequillado en Guamúchil, Sinaloa.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+/* =========================================================
+   EVENTOS
+   ========================================================= */
+
+.events-page {
+    background: var(--cream);
+    color: var(--text);
+}
+
+
+/* =========================================================
+   EVENT HERO
+   ========================================================= */
+
+.events-hero {
+    position: relative;
+
+    min-height: 680px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    color: white;
+}
+
+
+.events-hero-background {
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        url("https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=2200&q=90");
+
+    background-size: cover;
+    background-position: center;
+
+    transform: scale(1.03);
+}
+
+
+.events-hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0,0,0,.93) 0%,
+            rgba(0,0,0,.62) 35%,
+            rgba(0,0,0,.72) 100%
+        );
+}
+
+
+.events-hero-content {
+    position: relative;
+
+    z-index: 5;
+
+    width:
+        min(900px, calc(100% - 40px));
+
+    text-align: center;
+
+    padding-top: 80px;
+}
+
+
+.events-hero-kicker {
+    margin-bottom: 20px;
+
+    font-size: 10px;
+    font-weight: 500;
+
+    letter-spacing: .32em;
+
+    color:
+        rgba(255,255,255,.72);
+}
+
+
+.events-hero h1 {
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(65px, 9vw, 125px);
+
+    font-weight: 500;
+
+    line-height: .82;
+
+    letter-spacing: -.04em;
+}
+
+
+.events-hero h1 span {
+    display: block;
+
+    color: var(--gold-light);
+
+    font-style: italic;
+
+    font-weight: 400;
+}
+
+
+.events-hero-text {
+    max-width: 520px;
+
+    margin:
+        32px auto 0;
+
+    font-size: 14px;
+
+    font-weight: 300;
+
+    line-height: 1.9;
+
+    color:
+        rgba(255,255,255,.78);
+}
+
+
+/* =========================================================
+   INTRO EVENTOS
+   ========================================================= */
+
+.events-intro {
+    padding:
+        125px 0 135px;
+
+    background:
+        var(--cream);
+}
+
+
+.events-intro-inner {
+    width:
+        min(1200px, calc(100% - 80px));
+
+    margin: auto;
+}
+
+
+.events-intro-grid {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 100px;
+
+    align-items: center;
+}
+
+
+.events-intro-title .eyebrow {
+    margin-bottom: 22px;
+}
+
+
+.events-intro-title h2 {
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(50px, 5vw, 75px);
+
+    font-weight: 500;
+
+    line-height: .9;
+
+    letter-spacing: -.03em;
+}
+
+
+.events-intro-title h2 span {
+    display: block;
+
+    color:
+        #89847b;
+}
+
+
+.events-intro-text {
+    max-width: 500px;
+}
+
+
+.events-intro-text p {
+    margin-bottom: 22px;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    color:
+        #69655d;
+}
+
+
+.events-intro-text strong {
+    color:
+        var(--text);
+}
+
+
+/* =========================================================
+   EVENT TYPES
+   ========================================================= */
+
+.event-types {
+    padding:
+        0 0 135px;
+
+    background:
+        var(--cream);
+}
+
+
+.event-types-inner {
+    width:
+        min(1200px, calc(100% - 80px));
+
+    margin: auto;
+}
+
+
+.event-types-header {
+    margin-bottom: 55px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+}
+
+
+.event-types-header h2 {
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(45px, 5vw, 68px);
+
+    font-weight: 500;
+
+    line-height: .9;
+}
+
+
+.event-types-header h2 span {
+    color:
+        #89847b;
+}
+
+
+.event-types-label {
+    font-size: 9px;
+
+    letter-spacing: .22em;
+
+    color:
+        var(--muted);
+}
+
+
+.event-cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+
+.event-card {
+    position: relative;
+
+    min-height: 390px;
+
+    padding: 38px 32px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    overflow: hidden;
+
+    background:
+        var(--black);
+
+    color: white;
+}
+
+
+.event-card::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0,0,0,.05),
+            rgba(0,0,0,.78)
+        );
+
+    z-index: 1;
+}
+
+
+.event-card-content {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.event-card-number {
+    position: absolute;
+
+    top: 25px;
+    right: 28px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 34px;
+
+    color:
+        rgba(255,255,255,.32);
+
+    z-index: 2;
+}
+
+
+.event-card h3 {
+    margin-bottom: 14px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 38px;
+
+    font-weight: 500;
+
+    line-height: .9;
+}
+
+
+.event-card p {
+    font-size: 12px;
+
+    line-height: 1.8;
+
+    color:
+        rgba(255,255,255,.62);
+}
+
+
+.event-card:nth-child(1) {
+    background-image:
+        linear-gradient(
+            180deg,
+            rgba(0,0,0,.12),
+            rgba(0,0,0,.85)
+        ),
+        url("https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=1000&q=85");
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+.event-card:nth-child(2) {
+    background-image:
+        linear-gradient(
+            180deg,
+            rgba(0,0,0,.12),
+            rgba(0,0,0,.85)
+        ),
+        url("https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1000&q=85");
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+.event-card:nth-child(3) {
+    background-image:
+        linear-gradient(
+            180deg,
+            rgba(0,0,0,.12),
+            rgba(0,0,0,.85)
+        ),
+        url("https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=1000&q=85");
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* =========================================================
+   EVENT EXPERIENCE
+   ========================================================= */
+
+.event-experience {
+    padding:
+        130px 0;
+
+    background:
+        #ebe5da;
+}
+
+
+.event-experience-inner {
+    width:
+        min(1200px, calc(100% - 80px));
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 100px;
+
+    align-items: center;
+}
+
+
+.event-experience-image {
+    height: 560px;
+
+    overflow: hidden;
+}
+
+
+.event-experience-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 1s ease;
+}
+
+
+.event-experience-image:hover img {
+    transform:
+        scale(1.04);
+}
+
+
+.event-experience-content {
+    max-width: 500px;
+}
+
+
+.event-experience-content h2 {
+    margin-bottom: 25px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(50px, 5vw, 74px);
+
+    font-weight: 500;
+
+    line-height: .9;
+}
+
+
+.event-experience-content h2 span {
+    display: block;
+
+    color:
+        #89847b;
+}
+
+
+.event-experience-content > p:not(.eyebrow) {
+    margin-bottom: 28px;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    color:
+        #6f6a61;
+}
+
+
+/* =========================================================
+   EVENT CTA
+   ========================================================= */
+
+.events-cta {
+    position: relative;
+
+    min-height: 520px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    color: white;
+}
+
+
+.events-cta-background {
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=2200&q=90");
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+.events-cta-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        rgba(0,0,0,.70);
+}
+
+
+.events-cta-content {
+    position: relative;
+
+    z-index: 2;
+
+    width:
+        min(700px, calc(100% - 40px));
+
+    text-align: center;
+}
+
+
+.events-cta-content h2 {
+    margin-bottom: 22px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(52px, 6vw, 82px);
+
+    font-weight: 500;
+
+    line-height: .9;
+}
+
+
+.events-cta-content h2 span {
+    display: block;
+
+    color:
+        var(--gold-light);
+
+    font-style: italic;
+}
+
+
+.events-cta-content p:not(.eyebrow) {
+    margin-bottom: 32px;
+
+    font-size: 13px;
+
+    color:
+        rgba(255,255,255,.72);
+}
+
+
+/* =========================================================
+   EVENTOS RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .events-intro-inner,
+    .event-types-inner,
+    .event-experience-inner {
+        width:
+            calc(100% - 60px);
+    }
+
+    .events-intro-grid,
+    .event-experience-inner {
+        gap: 55px;
+    }
+
+    .event-cards {
+        gap: 15px;
+    }
+
+}
+
+
+@media (max-width: 760px) {
+
+    .events-hero {
+        min-height: 620px;
+    }
+
+    .events-hero-content {
+        padding-top: 70px;
+    }
+
+    .events-hero h1 {
+        font-size:
+            clamp(58px, 17vw, 90px);
+    }
+
+    .events-hero-text {
+        font-size: 12px;
+    }
+
+
+    .events-intro {
+        padding:
+            90px 0 100px;
+    }
+
+    .events-intro-inner,
+    .event-types-inner,
+    .event-experience-inner {
+        width:
+            calc(100% - 35px);
+    }
+
+    .events-intro-grid {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+
+    .event-types {
+        padding-bottom: 90px;
+    }
+
+
+    .event-types-header {
+        display: block;
+
+        margin-bottom: 40px;
+    }
+
+    .event-types-label {
+        display: block;
+
+        margin-top: 15px;
+    }
+
+
+    .event-cards {
+        grid-template-columns: 1fr;
+    }
+
+
+    .event-card {
+        min-height: 340px;
+    }
+
+
+    .event-experience {
+        padding:
+            90px 0;
+    }
+
+    .event-experience-inner {
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+    }
+
+    .event-experience-image {
+        height: 420px;
+    }
+
+
+    .events-cta {
+        min-height: 450px;
+    }
+
+}
+
+
+@media (max-width: 430px) {
+
+    .events-hero {
+        min-height: 580px;
+    }
+
+    .event-card {
+        min-height: 320px;
+
+        padding: 30px 25px;
+    }
+
+    .event-experience-image {
+        height: 320px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body class="events-page">
+
+
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
+
+<header class="header">
+
+    <div class="header-inner">
+
+        <nav class="nav nav-left">
+
+            <a href="menu.html">
+                Menú
+            </a>
+
+            <a href="eventos.html" class="active">
+                Eventos
+            </a>
+
+        </nav>
+
+
+        <a href="index.html" class="logo" aria-label="El Alemán">
+
+            <img
+                src="https://i.postimg.cc/pTQxvCGG/Whats-App-Image-2026-09-27-at-08-05-31.jpg"
+                alt="El Alemán - Camarón Enmantequillado">
+
+        </a>
+
+
+        <nav class="nav nav-right">
+
+            <a href="index.html">
+                Inicio
+            </a>
+
+            <a href="nosotros.html">
+                Nosotros
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+
+<section class="events-hero">
+
+    <div class="events-hero-background"></div>
+
+    <div class="events-hero-overlay"></div>
+
+
+    <div class="events-hero-content">
+
+        <p class="events-hero-kicker">
+            EL ALEMÁN · GUAMÚCHIL
+        </p>
+
+        <h1>
+            Tus momentos.
+            <span>Nuestro sabor.</span>
+        </h1>
+
+        <p class="events-hero-text">
+            Celebra, reúne y disfruta.
+            En El Alemán llevamos nuestra especialidad
+            a tus momentos más importantes.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     INTRO
+     ========================================================= -->
+
+<section class="events-intro">
+
+    <div class="events-intro-inner">
+
+        <div class="events-intro-grid">
+
+
+            <div class="events-intro-title">
+
+                <p class="eyebrow">
+                    EVENTOS
+                </p>
+
+                <h2>
+                    Momentos que
+                    <span>merecen algo especial.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="events-intro-text">
+
+                <p>
+                    Un cumpleaños, una reunión con amigos,
+                    una celebración familiar o simplemente
+                    una ocasión para compartir.
+                </p>
+
+                <p>
+                    En <strong>El Alemán</strong> queremos que
+                    el sabor sea parte del momento, con nuestro
+                    Camarón Enmantequillado como protagonista.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     EVENT TYPES
+     ========================================================= -->
+
+<section class="event-types">
+
+    <div class="event-types-inner">
+
+
+        <div class="event-types-header">
+
+            <div>
+
+                <p class="eyebrow">
+                    PARA CADA OCASIÓN
+                </p>
+
+                <h2>
+                    Tu evento.
+                    <span>Tu manera.</span>
+                </h2>
+
+            </div>
+
+            <span class="event-types-label">
+                01 — 03
+            </span>
+
+        </div>
+
+
+        <div class="event-cards">
+
+
+            <article class="event-card">
+
+                <span class="event-card-number">
+                    01
+                </span>
+
+                <div class="event-card-content">
+
+                    <h3>
+                        Cumpleaños
+                    </h3>
+
+                    <p>
+                        Celebra un día especial
+                        rodeado de quienes más quieres
+                        y disfruta algo diferente.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="event-card">
+
+                <span class="event-card-number">
+                    02
+                </span>
+
+                <div class="event-card-content">
+
+                    <h3>
+                        Reuniones
+                    </h3>
+
+                    <p>
+                        Amigos, familia o compañeros.
+                        Un buen momento siempre empieza
+                        alrededor de una buena mesa.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="event-card">
+
+                <span class="event-card-number">
+                    03
+                </span>
+
+                <div class="event-card-content">
+
+                    <h3>
+                        Celebraciones
+                    </h3>
+
+                    <p>
+                        Aniversarios, ocasiones especiales
+                        y cualquier momento que quieras
+                        convertir en un recuerdo.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     EXPERIENCE
+     ========================================================= -->
+
+<section class="event-experience">
+
+    <div class="event-experience-inner">
+
+
+        <div class="event-experience-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1800&q=90"
+                alt="Cena y celebración">
+
+        </div>
+
+
+        <div class="event-experience-content">
+
+            <div class="section-number">
+                02
+            </div>
+
+            <p class="eyebrow">
+                EL SABOR DE LA CELEBRACIÓN
+            </p>
+
+            <h2>
+                Algo más que
+                <span>una comida.</span>
+            </h2>
+
+            <p>
+                Queremos que venir a El Alemán sea parte
+                de la experiencia. Una mesa, buena compañía
+                y nuestro Camarón Enmantequillado al centro.
+            </p>
+
+            <p>
+                Para eventos y celebraciones,
+                escríbenos directamente y cuéntanos
+                qué estás planeando.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CTA
+     ========================================================= -->
+
+<section class="events-cta">
+
+    <div class="events-cta-background"></div>
+
+    <div class="events-cta-overlay"></div>
+
+
+    <div class="events-cta-content">
+
+        <p class="eyebrow">
+            HABLEMOS DE TU EVENTO
+        </p>
+
+        <h2>
+            ¿Tienes algo
+            <span>en mente?</span>
+        </h2>
+
+        <p>
+            Cuéntanos qué quieres celebrar
+            y nos ponemos en contacto contigo.
+        </p>
+
+        <a
+            href="https://wa.me/526731340913"
+            class="button button-gold"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            Escríbenos por WhatsApp
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer class="footer">
+
+    <div class="footer-inner">
+
+
+        <div class="footer-brand">
+
+            <img
+                src="https://i.postimg.cc/pTQxvCGG/Whats-App-Image-2026-09-27-at-08-05-31.jpg"
+                alt="El Alemán">
+
+            <p>
+                Camarón Enmantequillado
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="index.html">
+                Inicio
+            </a>
+
+            <a href="menu.html">
+                Menú
+            </a>
+
+            <a href="eventos.html">
+                Eventos
+            </a>
+
+            <a href="nosotros.html">
+                Nosotros
+            </a>
+
+        </div>
+
+
+        <div class="footer-contact">
+
+            <p>
+                Guamúchil, Sinaloa
+            </p>
+
+            <a href="tel:+526731340913">
+                +52 673 134 0913
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 El Alemán
+        </span>
+
+        <span>
+            Camarón Enmantequillado
+        </span>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     WHATSAPP
+     ========================================================= -->
+
+<a
+    href="https://wa.me/526731340913"
+    class="whatsapp"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="WhatsApp">
+
+    WhatsApp
+
+</a>
+
+
+</body>
+</html>
