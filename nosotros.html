@@ -1,1 +1,1595 @@
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nosotros | El Alemán</title>
+
+<meta
+    name="description"
+    content="Conoce El Alemán — una historia entre Alemania y Sinaloa, unida por la cocina y el sabor."
+>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+>
+
+<link rel="stylesheet" href="style.css">
+
+
+<style>
+
+/* =========================================================
+   NOSOTROS
+   ========================================================= */
+
+.nosotros-page {
+    background: var(--cream);
+    color: var(--text);
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.nosotros-hero {
+
+    position: relative;
+
+    min-height: 680px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    color: white;
+}
+
+
+.nosotros-hero-background {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2200&q=90");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+
+.nosotros-hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0,0,0,.94) 0%,
+            rgba(0,0,0,.62) 40%,
+            rgba(0,0,0,.76) 100%
+        );
+}
+
+
+.nosotros-hero-content {
+
+    position: relative;
+
+    z-index: 5;
+
+    width:
+        min(900px, calc(100% - 40px));
+
+    text-align: center;
+
+    padding-top: 80px;
+}
+
+
+.nosotros-hero-kicker {
+
+    margin-bottom: 20px;
+
+    font-size: 10px;
+
+    font-weight: 500;
+
+    letter-spacing: .32em;
+
+    color:
+        rgba(255,255,255,.72);
+}
+
+
+.nosotros-hero h1 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(70px, 10vw, 135px);
+
+    font-weight: 500;
+
+    line-height: .82;
+
+    letter-spacing: -.04em;
+}
+
+
+.nosotros-hero h1 span {
+
+    display: block;
+
+    color:
+        var(--gold-light);
+
+    font-style: italic;
+
+    font-weight: 400;
+}
+
+
+.nosotros-hero-text {
+
+    max-width: 540px;
+
+    margin:
+        32px auto 0;
+
+    font-size: 14px;
+
+    font-weight: 300;
+
+    line-height: 1.9;
+
+    color:
+        rgba(255,255,255,.78);
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.nosotros-intro {
+
+    padding:
+        125px 0 135px;
+
+    background:
+        var(--cream);
+}
+
+
+.nosotros-intro-inner {
+
+    width:
+        min(1200px, calc(100% - 80px));
+
+    margin: auto;
+}
+
+
+.nosotros-intro-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 100px;
+
+    align-items: start;
+}
+
+
+.nosotros-intro-title .eyebrow {
+
+    margin-bottom: 22px;
+}
+
+
+.nosotros-intro-title h2 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(50px, 5vw, 76px);
+
+    font-weight: 500;
+
+    line-height: .9;
+
+    letter-spacing: -.03em;
+}
+
+
+.nosotros-intro-title h2 span {
+
+    display: block;
+
+    color:
+        #89847b;
+}
+
+
+.nosotros-intro-text {
+
+    max-width: 500px;
+
+    padding-top: 10px;
+}
+
+
+.nosotros-intro-text p {
+
+    margin-bottom: 22px;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    color:
+        #69655d;
+}
+
+
+.nosotros-intro-text strong {
+
+    color:
+        var(--text);
+}
+
+
+/* =========================================================
+   TOBI + GRISELDA
+   ========================================================= */
+
+.nosotros-story {
+
+    padding:
+        130px 0;
+
+    background:
+        #ebe5da;
+}
+
+
+.nosotros-story-inner {
+
+    width:
+        min(1200px, calc(100% - 80px));
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1.05fr .95fr;
+
+    gap: 100px;
+
+    align-items: center;
+}
+
+
+.nosotros-story-image {
+
+    height: 600px;
+
+    overflow: hidden;
+
+    background:
+        #d9d2c6;
+}
+
+
+.nosotros-story-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 1s ease;
+}
+
+
+.nosotros-story-image:hover img {
+
+    transform:
+        scale(1.04);
+}
+
+
+.nosotros-story-content {
+
+    max-width: 500px;
+}
+
+
+.nosotros-story-content .section-number {
+
+    margin-bottom: 25px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 32px;
+
+    color:
+        var(--gold);
+}
+
+
+.nosotros-story-content h2 {
+
+    margin-bottom: 28px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(50px, 5vw, 74px);
+
+    font-weight: 500;
+
+    line-height: .9;
+}
+
+
+.nosotros-story-content h2 span {
+
+    display: block;
+
+    color:
+        #89847b;
+}
+
+
+.nosotros-story-content p {
+
+    margin-bottom: 22px;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    color:
+        #6f6a61;
+}
+
+
+/* =========================================================
+   NAME / IDENTITY
+   ========================================================= */
+
+.nosotros-name {
+
+    padding:
+        130px 30px;
+
+    background:
+        var(--black);
+
+    color: white;
+}
+
+
+.nosotros-name-inner {
+
+    width:
+        min(1050px, 100%);
+
+    margin: auto;
+
+    text-align: center;
+}
+
+
+.nosotros-name .eyebrow {
+
+    color:
+        var(--gold-light);
+}
+
+
+.nosotros-name h2 {
+
+    display: flex;
+
+    flex-direction: column;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(58px, 8vw, 115px);
+
+    font-weight: 400;
+
+    line-height: .82;
+
+    letter-spacing: -.04em;
+}
+
+
+.nosotros-name h2 span:nth-child(2) {
+
+    color:
+        #77746e;
+}
+
+
+.nosotros-name h2 strong {
+
+    color:
+        var(--gold-light);
+
+    font-weight: 500;
+}
+
+
+.nosotros-name-text {
+
+    max-width: 600px;
+
+    margin:
+        38px auto 0;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+    color:
+        rgba(255,255,255,.58);
+}
+
+
+/* =========================================================
+   PHILOSOPHY
+   ========================================================= */
+
+.nosotros-philosophy {
+
+    padding:
+        135px 0;
+
+    background:
+        var(--cream);
+}
+
+
+.nosotros-philosophy-inner {
+
+    width:
+        min(1200px, calc(100% - 80px));
+
+    margin: auto;
+}
+
+
+.nosotros-philosophy-header {
+
+    margin-bottom: 65px;
+}
+
+
+.nosotros-philosophy-header h2 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(50px, 6vw, 78px);
+
+    font-weight: 500;
+
+    line-height: .9;
+}
+
+
+.nosotros-philosophy-header h2 span {
+
+    color:
+        #89847b;
+}
+
+
+.nosotros-philosophy-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 60px;
+}
+
+
+.philosophy-item {
+
+    padding-top: 25px;
+
+    border-top:
+        1px solid rgba(0,0,0,.15);
+}
+
+
+.philosophy-number {
+
+    margin-bottom: 28px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 30px;
+
+    color:
+        var(--gold);
+}
+
+
+.philosophy-item h3 {
+
+    margin-bottom: 18px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 35px;
+
+    font-weight: 500;
+
+    line-height: .95;
+}
+
+
+.philosophy-item p {
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+    color:
+        #6d6961;
+}
+
+
+/* =========================================================
+   CAMARÓN / SIGNATURE
+   ========================================================= */
+
+.nosotros-signature {
+
+    padding:
+        130px 0;
+
+    background:
+        #ebe5da;
+}
+
+
+.nosotros-signature-inner {
+
+    width:
+        min(1200px, calc(100% - 80px));
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        .9fr 1.1fr;
+
+    gap: 100px;
+
+    align-items: center;
+}
+
+
+.nosotros-signature-content {
+
+    max-width: 500px;
+}
+
+
+.nosotros-signature-content h2 {
+
+    margin-bottom: 25px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(50px, 5vw, 74px);
+
+    font-weight: 500;
+
+    line-height: .9;
+}
+
+
+.nosotros-signature-content h2 span {
+
+    display: block;
+
+    color:
+        #89847b;
+}
+
+
+.nosotros-signature-content p:not(.eyebrow) {
+
+    margin-bottom: 22px;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    color:
+        #6f6a61;
+}
+
+
+.nosotros-signature-image {
+
+    height: 560px;
+
+    overflow: hidden;
+}
+
+
+.nosotros-signature-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 1s ease;
+}
+
+
+.nosotros-signature-image:hover img {
+
+    transform:
+        scale(1.04);
+}
+
+
+/* =========================================================
+   FINAL CTA
+   ========================================================= */
+
+.nosotros-cta {
+
+    position: relative;
+
+    min-height: 500px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    color: white;
+}
+
+
+.nosotros-cta-background {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        url("https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=2200&q=90");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+
+.nosotros-cta-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        rgba(0,0,0,.70);
+}
+
+
+.nosotros-cta-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width:
+        min(700px, calc(100% - 40px));
+
+    text-align: center;
+}
+
+
+.nosotros-cta-content h2 {
+
+    margin-bottom: 22px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(52px, 6vw, 82px);
+
+    font-weight: 500;
+
+    line-height: .9;
+}
+
+
+.nosotros-cta-content h2 span {
+
+    display: block;
+
+    color:
+        var(--gold-light);
+
+    font-style: italic;
+}
+
+
+.nosotros-cta-content p:not(.eyebrow) {
+
+    margin-bottom: 32px;
+
+    font-size: 13px;
+
+    color:
+        rgba(255,255,255,.72);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .nosotros-intro-inner,
+    .nosotros-story-inner,
+    .nosotros-philosophy-inner,
+    .nosotros-signature-inner {
+
+        width:
+            calc(100% - 60px);
+    }
+
+
+    .nosotros-intro-grid,
+    .nosotros-story-inner,
+    .nosotros-signature-inner {
+
+        gap: 55px;
+    }
+
+
+    .nosotros-philosophy-grid {
+
+        gap: 35px;
+    }
+
+}
+
+
+@media (max-width: 760px) {
+
+    .nosotros-hero {
+
+        min-height: 620px;
+    }
+
+
+    .nosotros-hero-content {
+
+        padding-top: 70px;
+    }
+
+
+    .nosotros-hero h1 {
+
+        font-size:
+            clamp(60px, 18vw, 95px);
+    }
+
+
+    .nosotros-hero-text {
+
+        font-size: 12px;
+    }
+
+
+    .nosotros-intro {
+
+        padding:
+            90px 0 100px;
+    }
+
+
+    .nosotros-intro-inner,
+    .nosotros-story-inner,
+    .nosotros-philosophy-inner,
+    .nosotros-signature-inner {
+
+        width:
+            calc(100% - 35px);
+    }
+
+
+    .nosotros-intro-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+
+    .nosotros-story {
+
+        padding:
+            90px 0;
+    }
+
+
+    .nosotros-story-inner {
+
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+    }
+
+
+    .nosotros-story-image {
+
+        height: 430px;
+    }
+
+
+    .nosotros-name {
+
+        padding:
+            100px 20px;
+    }
+
+
+    .nosotros-name h2 {
+
+        font-size:
+            clamp(55px, 16vw, 90px);
+    }
+
+
+    .nosotros-philosophy {
+
+        padding:
+            95px 0;
+    }
+
+
+    .nosotros-philosophy-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+
+    .nosotros-signature {
+
+        padding:
+            90px 0;
+    }
+
+
+    .nosotros-signature-inner {
+
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+    }
+
+
+    .nosotros-signature-image {
+
+        height: 420px;
+    }
+
+
+    .nosotros-cta {
+
+        min-height: 450px;
+    }
+
+}
+
+
+@media (max-width: 430px) {
+
+    .nosotros-hero {
+
+        min-height: 580px;
+    }
+
+
+    .nosotros-story-image {
+
+        height: 330px;
+    }
+
+
+    .nosotros-signature-image {
+
+        height: 320px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body class="nosotros-page">
+
+
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
+
+<header class="header">
+
+    <div class="header-inner">
+
+
+        <nav class="nav nav-left">
+
+            <a href="menu.html">
+                Menú
+            </a>
+
+            <a href="eventos.html">
+                Eventos
+            </a>
+
+        </nav>
+
+
+        <a
+            href="index.html"
+            class="logo"
+            aria-label="El Alemán"
+        >
+
+            <img
+                src="https://i.postimg.cc/pTQxvCGG/Whats-App-Image-2026-09-27-at-08-05-31.jpg"
+                alt="El Alemán - Camarón Enmantequillado"
+            >
+
+        </a>
+
+
+        <nav class="nav nav-right">
+
+            <a href="index.html">
+                Inicio
+            </a>
+
+            <a
+                href="nosotros.html"
+                class="active"
+            >
+                Nosotros
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+
+<section class="nosotros-hero">
+
+    <div class="nosotros-hero-background"></div>
+
+    <div class="nosotros-hero-overlay"></div>
+
+
+    <div class="nosotros-hero-content">
+
+        <p class="nosotros-hero-kicker">
+            EL ALEMÁN · NUESTRA HISTORIA
+        </p>
+
+
+        <h1>
+
+            Dos lugares.
+
+            <span>Una identidad.</span>
+
+        </h1>
+
+
+        <p class="nosotros-hero-text">
+
+            Una historia que une Alemania y Sinaloa
+            a través de una misma pasión:
+            hacer las cosas bien.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     INTRO
+     ========================================================= -->
+
+<section class="nosotros-intro">
+
+    <div class="nosotros-intro-inner">
+
+
+        <div class="nosotros-intro-grid">
+
+
+            <div class="nosotros-intro-title">
+
+                <p class="eyebrow">
+                    NOSOTROS
+                </p>
+
+
+                <h2>
+
+                    Una idea sencilla.
+
+                    <span>Un sabor propio.</span>
+
+                </h2>
+
+            </div>
+
+
+            <div class="nosotros-intro-text">
+
+                <p>
+
+                    <strong>El Alemán</strong> nace de una
+                    historia que comienza lejos de Sinaloa,
+                    pero encuentra aquí su lugar.
+
+                </p>
+
+
+                <p>
+
+                    Tobi, alemán, y Griselda, sinaloense,
+                    unen dos culturas en un concepto
+                    gastronómico pensado para Guamúchil.
+
+                </p>
+
+
+                <p>
+
+                    El resultado es una cocina sencilla,
+                    cuidada y con una identidad propia.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     STORY
+     ========================================================= -->
+
+<section class="nosotros-story">
+
+    <div class="nosotros-story-inner">
+
+
+        <div class="nosotros-story-image">
+
+            <!--
+            REEMPLAZAR ESTA URL POR EL LINK DE POSTIMAGES
+            DE LA FOTO DE TOBI Y GRISELDA
+            -->
+
+            <img
+                src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=1800&q=90"
+                alt="Tobi y Griselda"
+            >
+
+        </div>
+
+
+        <div class="nosotros-story-content">
+
+
+            <div class="section-number">
+                01
+            </div>
+
+
+            <p class="eyebrow">
+                DOS CULTURAS
+            </p>
+
+
+            <h2>
+
+                Alemania
+
+                <span>× Sinaloa.</span>
+
+            </h2>
+
+
+            <p>
+
+                El nombre <strong>El Alemán</strong> tiene
+                una razón muy sencilla.
+
+            </p>
+
+
+            <p>
+
+                Representa a Tobi, alemán, y al mismo tiempo
+                forma parte de una historia compartida con
+                Griselda, sinaloense.
+
+            </p>
+
+
+            <p>
+
+                No se trata de mezclar culturas por mezclar.
+                Se trata de tomar lo mejor de cada lugar
+                y crear algo que tenga sentido aquí,
+                en Guamúchil.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     NAME / IDENTITY
+     ========================================================= -->
+
+<section class="nosotros-name">
+
+    <div class="nosotros-name-inner">
+
+
+        <p class="eyebrow">
+            NUESTRA IDENTIDAD
+        </p>
+
+
+        <h2>
+
+            ORIGEN.
+
+            <span>SINALOA.</span>
+
+            <strong>SABOR.</strong>
+
+        </h2>
+
+
+        <p class="nosotros-name-text">
+
+            Una identidad inspirada en nuestras raíces,
+            pero pensada para nuestra ciudad.
+            El Alemán es nuestro nombre,
+            nuestro concepto y nuestra manera de hacer las cosas.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PHILOSOPHY
+     ========================================================= -->
+
+<section class="nosotros-philosophy">
+
+    <div class="nosotros-philosophy-inner">
+
+
+        <div class="nosotros-philosophy-header">
+
+            <p class="eyebrow">
+                NUESTRA FILOSOFÍA
+            </p>
+
+
+            <h2>
+
+                Calidad en
+
+                <span>cada detalle.</span>
+
+            </h2>
+
+        </div>
+
+
+        <div class="nosotros-philosophy-grid">
+
+
+            <div class="philosophy-item">
+
+                <div class="philosophy-number">
+                    01
+                </div>
+
+
+                <h3>
+                    Ingredientes
+                </h3>
+
+
+                <p>
+
+                    Seleccionamos ingredientes de
+                    alta calidad, frescos y cuidadosamente
+                    elegidos para cada preparación.
+
+                </p>
+
+            </div>
+
+
+            <div class="philosophy-item">
+
+                <div class="philosophy-number">
+                    02
+                </div>
+
+
+                <h3>
+                    Preparación
+                </h3>
+
+
+                <p>
+
+                    Cada plato se prepara con atención,
+                    precisión y el cuidado necesario
+                    para mantener nuestro estándar.
+
+                </p>
+
+            </div>
+
+
+            <div class="philosophy-item">
+
+                <div class="philosophy-number">
+                    03
+                </div>
+
+
+                <h3>
+                    Limpieza
+                </h3>
+
+
+                <p>
+
+                    La limpieza y el orden forman parte
+                    fundamental de nuestra manera de trabajar,
+                    desde la cocina hasta el plato.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SIGNATURE DISH
+     ========================================================= -->
+
+<section class="nosotros-signature">
+
+    <div class="nosotros-signature-inner">
+
+
+        <div class="nosotros-signature-content">
+
+
+            <p class="eyebrow">
+                NUESTRA ESPECIALIDAD
+            </p>
+
+
+            <h2>
+
+                Camarón
+
+                <span>Enmantequillado.</span>
+
+            </h2>
+
+
+            <p>
+
+                Nuestra especialidad nace de una receta
+                familiar que hemos adaptado a los sabores,
+                ingredientes y gustos de Sinaloa.
+
+            </p>
+
+
+            <p>
+
+                Una receta propia, preparada con ingredientes
+                frescos y seleccionados, y elaborada con
+                la máxima atención y cuidado.
+
+            </p>
+
+
+            <a
+                href="menu.html"
+                class="arrow-link"
+            >
+
+                <span>
+                    Conoce nuestro menú
+                </span>
+
+                <strong>
+                    →
+                </strong>
+
+            </a>
+
+        </div>
+
+
+        <div class="nosotros-signature-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?auto=format&fit=crop&w=1800&q=90"
+                alt="Camarón Enmantequillado"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CTA
+     ========================================================= -->
+
+<section class="nosotros-cta">
+
+    <div class="nosotros-cta-background"></div>
+
+    <div class="nosotros-cta-overlay"></div>
+
+
+    <div class="nosotros-cta-content">
+
+
+        <p class="eyebrow">
+            EL ALEMÁN
+        </p>
+
+
+        <h2>
+
+            Ven a conocer
+
+            <span>nuestra historia.</span>
+
+        </h2>
+
+
+        <p>
+
+            Guamúchil, Sinaloa
+
+        </p>
+
+
+        <a
+            href="https://wa.me/526731340913"
+            class="button button-gold"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            Escríbenos por WhatsApp
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer class="footer">
+
+    <div class="footer-inner">
+
+
+        <div class="footer-brand">
+
+            <img
+                src="https://i.postimg.cc/pTQxvCGG/Whats-App-Image-2026-09-27-at-08-05-31.jpg"
+                alt="El Alemán"
+            >
+
+
+            <p>
+                Camarón Enmantequillado
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="index.html">
+                Inicio
+            </a>
+
+            <a href="menu.html">
+                Menú
+            </a>
+
+            <a href="eventos.html">
+                Eventos
+            </a>
+
+            <a
+                href="nosotros.html"
+                class="active"
+            >
+                Nosotros
+            </a>
+
+        </div>
+
+
+        <div class="footer-contact">
+
+            <p>
+                Guamúchil, Sinaloa
+            </p>
+
+
+            <a href="tel:+526731340913">
+                +52 673 134 0913
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 El Alemán
+        </span>
+
+
+        <span>
+            Camarón Enmantequillado
+        </span>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     WHATSAPP
+     ========================================================= -->
+
+<a
+    href="https://wa.me/526731340913"
+    class="whatsapp"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="WhatsApp"
+>
+
+    WhatsApp
+
+</a>
+
+
+</body>
+</html>
