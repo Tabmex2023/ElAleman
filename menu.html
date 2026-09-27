@@ -1,1 +1,1377 @@
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Menú | El Alemán</title>
+
+<meta
+    name="description"
+    content="Menú de El Alemán — Camarón Enmantequillado en Guamúchil, Sinaloa."
+>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+>
+
+<link rel="stylesheet" href="style.css">
+
+
+<style>
+
+/* =========================================================
+   MENÚ
+   ========================================================= */
+
+.menu-page {
+    background: var(--cream);
+    color: var(--text);
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.menu-hero {
+
+    position: relative;
+
+    min-height: 680px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    color: white;
+}
+
+
+.menu-hero-background {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        url("https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?auto=format&fit=crop&w=2200&q=90");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+
+.menu-hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0,0,0,.94) 0%,
+            rgba(0,0,0,.55) 42%,
+            rgba(0,0,0,.78) 100%
+        );
+}
+
+
+.menu-hero-content {
+
+    position: relative;
+
+    z-index: 5;
+
+    width:
+        min(900px, calc(100% - 40px));
+
+    text-align: center;
+
+    padding-top: 80px;
+}
+
+
+.menu-hero-kicker {
+
+    margin-bottom: 20px;
+
+    font-size: 10px;
+
+    font-weight: 500;
+
+    letter-spacing: .32em;
+
+    color:
+        rgba(255,255,255,.72);
+}
+
+
+.menu-hero h1 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(75px, 10vw, 135px);
+
+    font-weight: 500;
+
+    line-height: .82;
+
+    letter-spacing: -.04em;
+}
+
+
+.menu-hero h1 span {
+
+    display: block;
+
+    color:
+        var(--gold-light);
+
+    font-style: italic;
+
+    font-weight: 400;
+}
+
+
+.menu-hero-text {
+
+    max-width: 520px;
+
+    margin:
+        32px auto 0;
+
+    font-size: 14px;
+
+    font-weight: 300;
+
+    line-height: 1.9;
+
+    color:
+        rgba(255,255,255,.78);
+}
+
+
+/* =========================================================
+   MENU INTRO
+   ========================================================= */
+
+.menu-intro {
+
+    padding:
+        120px 0 90px;
+
+    background:
+        var(--cream);
+}
+
+
+.menu-intro-inner {
+
+    width:
+        min(1200px, calc(100% - 80px));
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 100px;
+
+    align-items: end;
+}
+
+
+.menu-intro-title h2 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(50px, 5vw, 76px);
+
+    font-weight: 500;
+
+    line-height: .9;
+
+    letter-spacing: -.03em;
+}
+
+
+.menu-intro-title h2 span {
+
+    display: block;
+
+    color:
+        #89847b;
+}
+
+
+.menu-intro-text {
+
+    max-width: 490px;
+
+    padding-bottom: 5px;
+}
+
+
+.menu-intro-text p {
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    color:
+        #69655d;
+}
+
+
+/* =========================================================
+   MENU SECTION
+   ========================================================= */
+
+.menu-section {
+
+    padding:
+        30px 0 140px;
+
+    background:
+        var(--cream);
+}
+
+
+.menu-section-inner {
+
+    width:
+        min(1000px, calc(100% - 80px));
+
+    margin: auto;
+}
+
+
+/* =========================================================
+   CATEGORY
+   ========================================================= */
+
+.menu-category {
+
+    margin-bottom: 100px;
+}
+
+
+.menu-category:last-child {
+
+    margin-bottom: 0;
+}
+
+
+.menu-category-header {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 35px;
+
+    padding-bottom: 20px;
+
+    border-bottom:
+        1px solid rgba(0,0,0,.16);
+}
+
+
+.menu-category-title {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(42px, 5vw, 62px);
+
+    font-weight: 500;
+
+    line-height: .9;
+}
+
+
+.menu-category-title span {
+
+    color:
+        #89847b;
+}
+
+
+.menu-category-number {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 30px;
+
+    color:
+        var(--gold);
+}
+
+
+/* =========================================================
+   MENU ITEMS
+   ========================================================= */
+
+.menu-items {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.menu-item {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr auto;
+
+    gap: 35px;
+
+    padding:
+        27px 0;
+
+    border-bottom:
+        1px solid rgba(0,0,0,.10);
+}
+
+
+.menu-item:last-child {
+
+    border-bottom: none;
+}
+
+
+.menu-item-info h3 {
+
+    margin-bottom: 8px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 31px;
+
+    font-weight: 500;
+
+    line-height: 1;
+}
+
+
+.menu-item-info p {
+
+    max-width: 650px;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+    color:
+        #77736b;
+}
+
+
+.menu-item-price {
+
+    padding-top: 3px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 27px;
+
+    font-weight: 500;
+
+    white-space: nowrap;
+
+    color:
+        var(--text);
+}
+
+
+/* =========================================================
+   SIGNATURE
+   ========================================================= */
+
+.menu-signature {
+
+    position: relative;
+
+    min-height: 500px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    color: white;
+}
+
+
+.menu-signature-background {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        url("https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?auto=format&fit=crop&w=2200&q=90");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+
+.menu-signature-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        rgba(0,0,0,.70);
+}
+
+
+.menu-signature-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width:
+        min(750px, calc(100% - 40px));
+
+    text-align: center;
+}
+
+
+.menu-signature-content h2 {
+
+    margin-bottom: 20px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(55px, 7vw, 90px);
+
+    font-weight: 500;
+
+    line-height: .85;
+}
+
+
+.menu-signature-content h2 span {
+
+    display: block;
+
+    color:
+        var(--gold-light);
+
+    font-style: italic;
+}
+
+
+.menu-signature-content p:not(.eyebrow) {
+
+    max-width: 520px;
+
+    margin:
+        0 auto 30px;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    color:
+        rgba(255,255,255,.72);
+}
+
+
+/* =========================================================
+   MENU NOTE
+   ========================================================= */
+
+.menu-note {
+
+    padding:
+        90px 30px;
+
+    background:
+        #ebe5da;
+
+    text-align: center;
+}
+
+
+.menu-note-inner {
+
+    width:
+        min(700px, 100%);
+
+    margin: auto;
+}
+
+
+.menu-note h2 {
+
+    margin-bottom: 18px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(42px, 5vw, 60px);
+
+    font-weight: 500;
+
+    line-height: .9;
+}
+
+
+.menu-note p {
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+    color:
+        #6f6a61;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .menu-intro-inner {
+
+        width:
+            calc(100% - 60px);
+
+        gap: 55px;
+    }
+
+
+    .menu-section-inner {
+
+        width:
+            calc(100% - 60px);
+    }
+
+}
+
+
+@media (max-width: 760px) {
+
+    .menu-hero {
+
+        min-height: 620px;
+    }
+
+
+    .menu-hero-content {
+
+        padding-top: 70px;
+    }
+
+
+    .menu-hero h1 {
+
+        font-size:
+            clamp(62px, 18vw, 95px);
+    }
+
+
+    .menu-hero-text {
+
+        font-size: 12px;
+    }
+
+
+    .menu-intro {
+
+        padding:
+            90px 0 70px;
+    }
+
+
+    .menu-intro-inner {
+
+        width:
+            calc(100% - 35px);
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+
+    .menu-section {
+
+        padding:
+            20px 0 90px;
+    }
+
+
+    .menu-section-inner {
+
+        width:
+            calc(100% - 35px);
+    }
+
+
+    .menu-category {
+
+        margin-bottom: 75px;
+    }
+
+
+    .menu-category-header {
+
+        margin-bottom: 20px;
+    }
+
+
+    .menu-item {
+
+        grid-template-columns:
+            1fr auto;
+
+        gap: 20px;
+
+        padding:
+            23px 0;
+    }
+
+
+    .menu-item-info h3 {
+
+        font-size: 27px;
+    }
+
+
+    .menu-item-info p {
+
+        font-size: 11px;
+    }
+
+
+    .menu-item-price {
+
+        font-size: 24px;
+    }
+
+
+    .menu-signature {
+
+        min-height: 450px;
+    }
+
+
+    .menu-note {
+
+        padding:
+            75px 25px;
+    }
+
+}
+
+
+@media (max-width: 430px) {
+
+    .menu-hero {
+
+        min-height: 580px;
+    }
+
+
+    .menu-item {
+
+        gap: 12px;
+    }
+
+
+    .menu-item-info h3 {
+
+        font-size: 25px;
+    }
+
+
+    .menu-item-price {
+
+        font-size: 22px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body class="menu-page">
+
+
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
+
+<header class="header">
+
+    <div class="header-inner">
+
+
+        <nav class="nav nav-left">
+
+            <a
+                href="menu.html"
+                class="active"
+            >
+                Menú
+            </a>
+
+
+            <a href="eventos.html">
+                Eventos
+            </a>
+
+        </nav>
+
+
+        <a
+            href="index.html"
+            class="logo"
+            aria-label="El Alemán"
+        >
+
+            <img
+                src="https://i.postimg.cc/pTQxvCGG/Whats-App-Image-2026-09-27-at-08-05-31.jpg"
+                alt="El Alemán - Camarón Enmantequillado"
+            >
+
+        </a>
+
+
+        <nav class="nav nav-right">
+
+            <a href="index.html">
+                Inicio
+            </a>
+
+
+            <a href="nosotros.html">
+                Nosotros
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+
+<section class="menu-hero">
+
+    <div class="menu-hero-background"></div>
+
+    <div class="menu-hero-overlay"></div>
+
+
+    <div class="menu-hero-content">
+
+        <p class="menu-hero-kicker">
+            EL ALEMÁN · GUAMÚCHIL
+        </p>
+
+
+        <h1>
+
+            Nuestro
+
+            <span>Menú.</span>
+
+        </h1>
+
+
+        <p class="menu-hero-text">
+
+            Una carta pensada alrededor de nuestra
+            especialidad y de ingredientes seleccionados
+            con cuidado.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     INTRO
+     ========================================================= -->
+
+<section class="menu-intro">
+
+    <div class="menu-intro-inner">
+
+
+        <div class="menu-intro-title">
+
+            <p class="eyebrow">
+                LA CARTA
+            </p>
+
+
+            <h2>
+
+                Sencillo.
+
+                <span>Bien hecho.</span>
+
+            </h2>
+
+        </div>
+
+
+        <div class="menu-intro-text">
+
+            <p>
+
+                Nuestra cocina parte de una idea clara:
+                utilizar ingredientes frescos y de calidad
+                para crear platos que realmente disfrutemos
+                servir y compartir.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     MENU
+     ========================================================= -->
+
+<section class="menu-section">
+
+    <div class="menu-section-inner">
+
+
+        <!-- ================= CAMARÓN ================= -->
+
+        <div class="menu-category">
+
+
+            <div class="menu-category-header">
+
+                <div>
+
+                    <p class="eyebrow">
+                        NUESTRA ESPECIALIDAD
+                    </p>
+
+
+                    <h2 class="menu-category-title">
+
+                        Camarón
+
+                        <span>Enmantequillado</span>
+
+                    </h2>
+
+                </div>
+
+
+                <span class="menu-category-number">
+                    01
+                </span>
+
+            </div>
+
+
+            <div class="menu-items">
+
+
+                <div class="menu-item">
+
+                    <div class="menu-item-info">
+
+                        <h3>
+                            Camarón Enmantequillado
+                        </h3>
+
+
+                        <p>
+
+                            Nuestra receta de la casa,
+                            preparada con camarón fresco,
+                            mantequilla y nuestra combinación
+                            especial de ingredientes.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="menu-item-price">
+                        $___
+                    </div>
+
+                </div>
+
+
+                <div class="menu-item">
+
+                    <div class="menu-item-info">
+
+                        <h3>
+                            Camarón Enmantequillado Especial
+                        </h3>
+
+
+                        <p>
+
+                            Nuestra especialidad con una
+                            preparación especial para quienes
+                            buscan una experiencia diferente.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="menu-item-price">
+                        $___
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= PARA COMPARTIR ================= -->
+
+        <div class="menu-category">
+
+
+            <div class="menu-category-header">
+
+                <div>
+
+                    <p class="eyebrow">
+                        PARA COMPARTIR
+                    </p>
+
+
+                    <h2 class="menu-category-title">
+
+                        Al centro.
+
+                        <span>Para todos.</span>
+
+                    </h2>
+
+                </div>
+
+
+                <span class="menu-category-number">
+                    02
+                </span>
+
+            </div>
+
+
+            <div class="menu-items">
+
+
+                <div class="menu-item">
+
+                    <div class="menu-item-info">
+
+                        <h3>
+                            Orden para Compartir
+                        </h3>
+
+
+                        <p>
+
+                            Una opción pensada para disfrutar
+                            nuestra especialidad entre amigos
+                            o familia.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="menu-item-price">
+                        $___
+                    </div>
+
+                </div>
+
+
+                <div class="menu-item">
+
+                    <div class="menu-item-info">
+
+                        <h3>
+                            Complementos
+                        </h3>
+
+
+                        <p>
+
+                            Acompañamientos seleccionados
+                            para completar la experiencia.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="menu-item-price">
+                        $___
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= BEBIDAS ================= -->
+
+        <div class="menu-category">
+
+
+            <div class="menu-category-header">
+
+                <div>
+
+                    <p class="eyebrow">
+                        BEBIDAS
+                    </p>
+
+
+                    <h2 class="menu-category-title">
+
+                        Para
+
+                        <span>acompañar.</span>
+
+                    </h2>
+
+                </div>
+
+
+                <span class="menu-category-number">
+                    03
+                </span>
+
+            </div>
+
+
+            <div class="menu-items">
+
+
+                <div class="menu-item">
+
+                    <div class="menu-item-info">
+
+                        <h3>
+                            Bebidas Frías
+                        </h3>
+
+
+                        <p>
+
+                            Selección de bebidas para
+                            acompañar nuestros platillos.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="menu-item-price">
+                        $___
+                    </div>
+
+                </div>
+
+
+                <div class="menu-item">
+
+                    <div class="menu-item-info">
+
+                        <h3>
+                            Agua Fresca
+                        </h3>
+
+
+                        <p>
+
+                            Preparada fresca para acompañar
+                            tu comida.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="menu-item-price">
+                        $___
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SIGNATURE
+     ========================================================= -->
+
+<section class="menu-signature">
+
+    <div class="menu-signature-background"></div>
+
+    <div class="menu-signature-overlay"></div>
+
+
+    <div class="menu-signature-content">
+
+
+        <p class="eyebrow">
+            EL ALEMÁN
+        </p>
+
+
+        <h2>
+
+            Una especialidad.
+
+            <span>Una identidad.</span>
+
+        </h2>
+
+
+        <p>
+
+            Nuestro Camarón Enmantequillado
+            es el corazón de El Alemán.
+
+        </p>
+
+
+        <a
+            href="https://wa.me/526731340913"
+            class="button button-gold"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            Reservar / Consultar
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     NOTE
+     ========================================================= -->
+
+<section class="menu-note">
+
+    <div class="menu-note-inner">
+
+
+        <p class="eyebrow">
+            IMPORTANTE
+        </p>
+
+
+        <h2>
+            Calidad primero.
+        </h2>
+
+
+        <p>
+
+            Trabajamos con ingredientes frescos
+            y seleccionados. La disponibilidad de algunos
+            productos puede variar según el día.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer class="footer">
+
+    <div class="footer-inner">
+
+
+        <div class="footer-brand">
+
+            <img
+                src="https://i.postimg.cc/pTQxvCGG/Whats-App-Image-2026-09-27-at-08-05-31.jpg"
+                alt="El Alemán"
+            >
+
+
+            <p>
+                Camarón Enmantequillado
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="index.html">
+                Inicio
+            </a>
+
+
+            <a
+                href="menu.html"
+                class="active"
+            >
+                Menú
+            </a>
+
+
+            <a href="eventos.html">
+                Eventos
+            </a>
+
+
+            <a href="nosotros.html">
+                Nosotros
+            </a>
+
+        </div>
+
+
+        <div class="footer-contact">
+
+            <p>
+                Guamúchil, Sinaloa
+            </p>
+
+
+            <a href="tel:+526731340913">
+                +52 673 134 0913
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 El Alemán
+        </span>
+
+
+        <span>
+            Camarón Enmantequillado
+        </span>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     WHATSAPP
+     ========================================================= -->
+
+<a
+    href="https://wa.me/526731340913"
+    class="whatsapp"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="WhatsApp"
+>
+
+    WhatsApp
+
+</a>
+
+
+</body>
+</html>
