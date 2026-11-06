@@ -1,267 +1,96 @@
-```css
-/* Globale Stile & Farbpalette basierend auf dem Logo */
+/* EL ALEMÁN — Taco Burger
+   Palette: beige #f5ebd9, ink #171a16, forest #173d2d
+*/
+
 :root {
-    --bg-color: #f5ebd9;       /* Edles Beige */
-    --primary-black: #111111;  /* Starkes Schwarz */
-    --accent-green: #2e5138;   /* Waldgrün für Frische */
-    --card-bg: #ffffff;        /* Weiß für Formular-Karten */
-    --text-muted: #555555;
+  --beige: #f5ebd9;
+  --beige-deep: #eadcc3;
+  --ink: #171a16;
+  --muted: #77766d;
+  --green: #173d2d;
+  --green-light: #28543e;
+  --white: #fffdf8;
+  --line: rgba(23, 26, 22, .14);
+  --serif: "Playfair Display", Georgia, serif;
+  --sans: "DM Sans", Arial, sans-serif;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 body {
-    background-color: var(--bg-color);
-    color: var(--primary-black);
-    padding-bottom: 60px;
+  margin: 0;
+  background: var(--beige);
+  color: var(--ink);
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
 }
+body.modal-open { overflow: hidden; }
+button, input, select { font: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+a { color: inherit; text-decoration: none; }
+button { cursor: pointer; }
 
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
+.hero {
+  min-height: 790px;
+  position: relative;
+  overflow: hidden;
+  padding: 0 5.5vw 50px;
+  background:
+    radial-gradient(ellipse at 50% 38%, rgba(255,255,255,.62), transparent 42%),
+    var(--beige);
 }
-
-/* Header & Logo */
-header {
-    text-align: center;
-    padding: 40px 20px 20px 20px;
+.top-nav {
+  height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+  z-index: 2;
 }
-
-.logo-placeholder {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+.nav-brand, .footer-brand {
+  font-weight: 800;
+  letter-spacing: .13em;
+  font-size: 12px;
 }
-
-header h1 {
-    font-size: 2.2rem;
-    font-weight: 900;
-    letter-spacing: 1px;
+.nav-brand span, .footer-brand span {
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .1em;
 }
-
-header h2 {
-    font-size: 1.2rem;
-    color: var(--accent-green);
-    letter-spacing: 3px;
-    margin-top: -5px;
-    margin-bottom: 10px;
+.nav-link {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--ink);
+  padding: 8px 0;
 }
-
-.tagline {
-    font-style: italic;
-    color: var(--text-muted);
+.hero-content {
+  max-width: 760px;
+  margin: 54px auto 0;
+  text-align: center;
+  position: relative;
+  z-index: 1;
 }
-
-/* Kombi Banner */
-.promo-banner {
-    background-color: var(--primary-black);
-    color: var(--bg-color);
-    padding: 20px;
-    border-radius: 12px;
-    text-align: center;
-    margin-bottom: 25px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+.logo-frame {
+  width: 142px;
+  height: 142px;
+  margin: 0 auto 25px;
+  padding: 7px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 1px solid rgba(23,26,22,.18);
+  box-shadow: 0 12px 35px rgba(44,35,19,.10);
 }
-
-.promo-banner h3 {
-    color: #f39c12; /* Gold-Gelb für Highlights */
-    margin-bottom: 5px;
+.logo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
 }
-
-.info-text {
-    font-size: 0.85rem;
-    opacity: 0.8;
-    margin-top: 8px;
-}
-
-/* Formular Sektionen */
-.step-section {
-    background-color: var(--card-bg);
-    padding: 20px;
-    border-radius: 12px;
-    margin-bottom: 20px;
-    border: 1px solid rgba(0,0,0,0.05);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
-}
-
-.step-section h3 {
-    border-bottom: 2px solid var(--primary-black);
-    padding-bottom: 8px;
-    margin-bottom: 15px;
-    font-size: 1.1rem;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.instruction {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-    margin-bottom: 15px;
-}
-
-/* Inputs */
-.input-group {
-    margin-bottom: 15px;
-}
-
-.input-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: 600;
-    font-size: 0.95rem;
-}
-
-.input-group input, .input-group select {
-    width: 100%;
-    padding: 12px;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    font-size: 1rem;
-    background-color: #fafafa;
-    transition: border-color 0.3s;
-}
-
-.input-group input:focus, .input-group select:focus {
-    outline: none;
-    border-color: var(--accent-green);
-}
-
-/* Knickbares Menü (Accordion) */
-.accordion-item {
-    border: 1px solid #eee;
-    border-radius: 8px;
-    margin-bottom: 10px;
-    overflow: hidden;
-}
-
-.accordion-header {
-    background-color: #fcfcfc;
-    padding: 15px;
-    font-weight: 600;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: background-color 0.2s;
-}
-
-.accordion-header:hover {
-    background-color: #f1ebd9;
-}
-
-.accordion-header i {
-    transition: transform 0.3s;
-}
-
-.accordion-content {
-    padding: 0;
-    max-height: 0;
-    overflow: hidden;
-    background-color: #fff;
-    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
-}
-
-/* Aktiver aufgeknickter Zustand */
-.accordion-item.active .accordion-header {
-    background-color: #f1ebd9;
-    border-bottom: 1px solid #eee;
-}
-
-.accordion-item.active .accordion-header i {
-    transform: rotate(180deg);
-}
-
-.accordion-item.active .accordion-content {
-    padding: 15px;
-    max-height: 200px; /* Reicht für Inhalt aus */
-}
-
-.accordion-content p {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-    margin-bottom: 12px;
-    line-height: 1.4;
-}
-
-.quantity-selector {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.quantity-selector label {
-    font-weight: bold;
-    font-size: 0.9rem;
-}
-
-.quantity-selector input {
-    width: 70px;
-    padding: 8px;
-    text-align: center;
-    border: 2px solid var(--primary-black);
-    border-radius: 6px;
-    font-size: 1rem;
-    font-weight: bold;
-}
-
-/* Großer Sende-Button */
-.btn-submit {
-    width: 100%;
-    background-color: #25d366; /* Original WhatsApp Grün */
-    color: white;
-    border: none;
-    padding: 16px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    border-radius: 12px;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
-    transition: transform 0.2s, background-color 0.2s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.btn-submit:hover {
-    background-color: #20ba5a;
-    transform: translateY(-2px);
-}
-
-/* Schwebender (Sticky) WhatsApp Button beim Scrollen */
-.btn-whatsapp-floating {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25d366;
-    color: white;
-    text-decoration: none;
-    padding: 12px 18px;
-    border-radius: 30px;
-    font-weight: bold;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    z-index: 999;
-    transition: transform 0.2s;
-}
-
-.btn-whatsapp-floating:hover {
-    transform: scale(1.05);
-    background-color: #20ba5a;
-}
-
-footer {
-    text-align: center;
-    padding: 30px;
-    font-size: 0.85rem;
-    color: var(--text-muted);
-}
+.eyebrow {
+  margin: 0 0 13px;
+  color: var(--green);
