@@ -1,361 +1,209 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>El Alemán | Camarón Mantequillajo</title>
-
-<meta name="description" content="El Alemán — Camarón Mantequillajo en Guamúchil, Sinaloa.">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Alemán - Taco Burger</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome für Icons -->
+    <link rel="stylesheet" href="https://cloudflare.com">
 </head>
-
 <body>
 
-<!-- ================= HEADER + HERO ================= -->
-
-<section class="hero">
-
-    <div class="hero-background"></div>
-    <div class="hero-overlay"></div>
-
-    <header class="header">
-
-        <div class="header-inner">
-
-            <nav class="nav nav-left">
-                <a href="menu.html">Menú</a>
-                <a href="eventos.html">Eventos</a>
-            </nav>
-
-            <a href="index.html" class="logo" aria-label="El Alemán">
-                <img
-                    src="https://i.postimg.cc/pTQxvCGG/Whats-App-Image-2026-09-27-at-08-05-31.jpg"
-                    alt="El Alemán - Camarón Mantequillajo">
-            </a>
-
-            <nav class="nav nav-right">
-                <a href="index.html" class="active">Inicio</a>
-                <a href="nosotros.html">Nosotros</a>
-            </nav>
-
+    <header>
+        <div class="logo-container">
+            <!-- Ersetze 'logo.png' später durch dein echtes GitHub-Bild -->
+            <div class="logo-placeholder">🇩🇪 EL ALEMÁN 🇲🇽</div>
+            <h1>EL ALEMÁN</h1>
+            <h2>TACO BURGER</h2>
+            <p class="tagline">¡Sazón alemán, tamaño sinaloense! 🥖🔥</p>
         </div>
-
     </header>
 
-
-    <div class="hero-content">
-
-        <p class="hero-kicker">
-            GUAMÚCHIL · SINALOA
-        </p>
-
-        <h1>
-            Camarón
-            <em>Mantequillajo</em>
-        </h1>
-
-        <p class="hero-text">
-            Una especialidad.<br>
-            Un sabor que nos distingue.
-        </p>
-
-        <div class="hero-actions">
-            <a href="menu.html" class="button button-gold">
-                Ver Menú
-            </a>
-
-            <a href="eventos.html" class="button button-light">
-                Eventos
-            </a>
+    <main class="container">
+        <!-- Promo Banner -->
+        <div class="promo-banner">
+            <h3>🔥 LA COMBO OFICIAL 🔥</h3>
+            <p><strong>3 Taco-Burgers a tu elección + 1L Té de Jazmín Helado por solo $100 Pesos</strong></p>
+            <p class="info-text">* Incluye ensalada fresca de pepino, jitomate y limón por un lado.</p>
         </div>
 
-    </div>
+        <!-- Bestell-Formular -->
+        <form id="orderForm">
+            
+            <section class="step-section">
+                <h3><i class="fa-solid fa-user"></i> 1. Tus Datos</h3>
+                <div class="input-group">
+                    <label for="clientName">Nombre Completo:</label>
+                    <input type="text" id="clientName" required placeholder="Ej. Juan Pérez">
+                </div>
+                <div class="input-group">
+                    <label for="clientWork">¿Dónde trabajas? (Para el sorteo 🎁):</label>
+                    <select id="clientWork" required>
+                        <option value="" disabled selected>Selecciona tu lugar</option>
+                        <option value="Palacio Municipal">Palacio Municipal</option>
+                        <option value="Policía / Comandancia">Policía / Comandancia</option>
+                        <option value="Comercio Centro">Comercio Centro</option>
+                        <option value="Otro">Otro lugar</option>
+                    </select>
+                </div>
+            </section>
+
+            <section class="step-section">
+                <h3><i class="fa-solid fa-utensils"></i> 2. Selecciona tus 3 Taco-Burgers</h3>
+                <p class="instruction">Haz clic en cada opción para ver el detalle y elegir la cantidad:</p>
+
+                <!-- Menü Items (Knickbar / Accordion) -->
+                <div class="accordion-container">
+                    
+                    <!-- Item 1 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <span>1. El Clásico Alemán 🇩🇪</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Receta original de carne premium sazonada al estilo Frikadelle con aderezo de mostaza alemana.</p>
+                            <div class="quantity-selector">
+                                <label>Cantidad:</label>
+                                <input type="number" id="qty1" min="0" max="3" value="0" class="taco-qty">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <span>2. El Quesoburger 🧀</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>El clásico sabor alemán cargado con una generosa porción de queso derretido.</p>
+                            <div class="quantity-selector">
+                                <label>Cantidad:</label>
+                                <input type="number" id="qty2" min="0" max="3" value="0" class="taco-qty">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <span>3. El Tocino Burger  Bacon</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Carne artesanal, queso fundido y trocitos de tocino crujiente dorados a la plancha.</p>
+                            <div class="quantity-selector">
+                                <label>Cantidad:</label>
+                                <input type="number" id="qty3" min="0" max="3" value="0" class="taco-qty">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <span>4. El Pollo-Burger 🍗</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Pechuga de pollo molida artesanal, queso derretido y nuestro aderezo cremocito de chipotle.</p>
+                            <div class="quantity-selector">
+                                <label>Cantidad:</label>
+                                <input type="number" id="qty4" min="0" max="3" value="0" class="taco-qty">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <span>5. El Picante Sinaloa 🌶️</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Carne artesanal, queso derretido y chiles toreados picaditos directo en la plancha.</p>
+                            <div class="quantity-selector">
+                                <label>Cantidad:</label>
+                                <input type="number" id="qty5" min="0" max="3" value="0" class="taco-qty">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="step-section">
+                <h3><i class="fa-solid fa-clock"></i> 3. Hora de recogida</h3>
+                <div class="input-group">
+                    <label for="pickupTime">¿A qué hora pasas al Food Truck?</label>
+                    <input type="time" id="pickupTime" min="10:00" max="14:00" required>
+                </div>
+            </section>
+
+            <!-- Großes Bestell-Button -->
+            <button type="button" class="btn-submit" onclick="sendOrder()">
+                <i class="fa-brands fa-whatsapp"></i> ENVIAR PEDIDO POR WHATSAPP
+            </button>
+        </form>
+    </main>
+
+    <!-- Schwebender WhatsApp Button (Sticky) -->
+    <a href="#" class="btn-whatsapp-floating" id="floatingBadge" onclick="sendOrder()">
+        <i class="fa-brands fa-whatsapp"></i><span>¡Pide ya!</span>
+    </a>
+
+    <footer>
+        <p>© 2026 El Alemán - Taco Burger | Centro de Guamúchil, Sinaloa</p>
+    </footer>
+
+    <!-- JavaScript für Logik und Interaktion -->
+    <script>
+        // Funktion für das Einknicken/Aufklappen des Menüs
+        function toggleAccordion(header) {
+            const item = header.parentElement;
+            item.classList.toggle('active');
+        }
+
+        // Funktion zum Generieren und Senden der WhatsApp Nachricht
+        function sendOrder() {
+            // DEINE HANDYNUMMER HIER EINTRAGEN (Mit Landeskennzahl, ohne + oder Leerzeichen)
+            const phoneNumber = "526730000000"; 
+
+            const name = document.getElementById('clientName').value;
+            const work = document.getElementById('clientWork').value;
+            const time = document.getElementById('pickupTime').value;
+
+            if(!name || !work || !time) {
+                alert("Por favor, llena tus datos de nombre, lugar de trabajo y hora de recogida.");
+                return;
+            }
+
+            // Tacos zählen
+            const q1 = parseInt(document.getElementById('qty1').value) || 0;
+            const q2 = parseInt(document.getElementById('qty2').value) || 0;
+            const q3 = parseInt(document.getElementById('qty3').value) || 0;
+            const q4 = parseInt(document.getElementById('qty4').value) || 0;
+            const q5 = parseInt(document.getElementById('qty5').value) || 0;
+
+            const totalTacos = q1 + q2 + q3 + q4 + q5;
+
+            if(totalTacos === 0) {
+                alert("Por favor, selecciona al menos un Taco-Burger.");
+                return;
+            }
+
+            // WhatsApp Text bauen
+            let message = `¡Hola El Alemán! 🚚%0A`;
+            message += `Quiero hacer un pedido:%0A%0A`;
+            message += `*• Nombre:* ${name}%0A`;
+            message += `*• Lugar:* ${work}%0A%0A`;
+            message += `*• Mis Taco-Burgers:*%0A`;
+            
+            if(q1 > 0) message += `   - ${q1}x El Clásico Alemán 🇩🇪%0A`;
+            if(q2 > 0) message += `   - ${q2}x El Quesoburger 🧀%0A`;
+            if(q3 > 0) message += `   - ${q3}x El Tocino Burger 🥓%0A`;
+            if(q4 > 0) message += `   - ${q4}x El Pollo-Burger 🍗%0A`;
+            if(q5 > 0) message += `   - ${q5}x El Picante Sinaloa 🌶️%0A`;
 
-
-    <div class="hero-bottom">
-        <span>EL ALEMÁN</span>
-        <span class="hero-line"></span>
-        <span>SCROLL</span>
-    </div>
-
-</section>
-
-
-<!-- ================= INTRO ================= -->
-
-<section class="intro">
-
-    <div class="intro-inner">
-
-        <div class="intro-label">
-            <span>01</span>
-            <span class="line"></span>
-            <span>LA ESPECIALIDAD</span>
-        </div>
-
-
-        <div class="intro-content">
-
-            <div class="intro-title">
-
-                <p class="eyebrow">
-                    NUESTRA COCINA
-                </p>
-
-                <h2>
-                    Menos es más.<br>
-                    <span>Cuando el sabor habla.</span>
-                </h2>
-
-            </div>
-
-
-            <div class="intro-text">
-
-                <p>
-                    En <strong>El Alemán</strong> tenemos una idea muy clara:
-                    hacer del camarón enmantequillado nuestra especialidad.
-                </p>
-
-                <p>
-                    Ingredientes seleccionados, una preparación cuidada
-                    y un sabor que no necesita demasiadas palabras.
-                </p>
-
-                <p>
-                    Mantequillajo.
-                </p>
-
-                <a href="menu.html" class="arrow-link">
-                    <span>Conoce nuestro menú</span>
-                    <strong>→</strong>
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <div class="intro-image">
-
-            <img
-                src="https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?auto=format&fit=crop&w=1800&q=90"
-                alt="Camarón preparado">
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-
-<!-- ================= EXPERIENCE ================= -->
-
-<section class="experience">
-
-    <div class="experience-inner">
-
-        <div class="experience-image">
-
-            <img
-                src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1800&q=90"
-                alt="Experiencia gastronómica">
-
-        </div>
-
-
-        <div class="experience-content">
-
-            <div class="section-number">
-                02
-            </div>
-
-            <p class="eyebrow">
-                UNA EXPERIENCIA DIFERENTE
-            </p>
-
-            <h2>
-                El sabor
-                <span>es el protagonista.</span>
-            </h2>
-
-            <p>
-                Un concepto sencillo, moderno y pensado para disfrutar.
-                Ya sea una comida entre amigos, una cena en familia
-                o una celebración especial.
-            </p>
-
-            <a href="nosotros.html" class="arrow-link">
-                <span>Conoce El Alemán</span>
-                <strong>→</strong>
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= EVENTS ================= -->
-
-<section class="events">
-
-    <div class="events-inner">
-
-        <div class="events-content">
-
-            <div class="section-number">
-                03
-            </div>
-
-            <p class="eyebrow">
-                VIERNES · SÁBADOS
-            </p>
-
-            <h2>
-                Tu evento.<br>
-                <span>Nuestro sabor.</span>
-            </h2>
-
-            <p>
-                Celebraciones, reuniones y momentos especiales
-                acompañados de nuestro Camarón Enmantequillado.
-            </p>
-
-            <a href="eventos.html" class="button button-dark">
-                Ver Eventos
-            </a>
-
-        </div>
-
-
-        <div class="events-number">
-            <span>E</span>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= FINAL CTA ================= -->
-
-<section class="final-cta">
-
-    <div class="final-background"></div>
-    <div class="final-overlay"></div>
-
-    <div class="final-content">
-
-        <p class="eyebrow">
-            EL ALEMÁN
-        </p>
-
-        <h2>
-            ¿Listo para
-            <span>probarlo?</span>
-        </h2>
-
-        <p>
-            Guamúchil, Sinaloa
-        </p>
-
-        <a
-            href="https://wa.me/526731340913"
-            class="button button-gold"
-            target="_blank"
-            rel="noopener noreferrer">
-
-            Escríbenos por WhatsApp
-
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- ================= FOOTER ================= -->
-
-<footer class="footer">
-
-    <div class="footer-inner">
-
-        <div class="footer-brand">
-
-            <img
-                src="https://i.postimg.cc/pTQxvCGG/Whats-App-Image-2026-09-27-at-08-05-31.jpg"
-                alt="El Alemán">
-
-            <p>
-                Camarón Enmantequillado
-            </p>
-
-        </div>
-
-
-        <div class="footer-links">
-
-            <a href="index.html">Inicio</a>
-            <a href="menu.html">Menú</a>
-            <a href="eventos.html">Eventos</a>
-            <a href="nosotros.html">Nosotros</a>
-
-        </div>
-
-
-        <div class="footer-contact">
-
-            <p>
-                Guamúchil, Sinaloa
-            </p>
-
-            <a href="tel:+526731340913">
-                +52 673 134 0913
-            </a>
-
-        </div>
-
-    </div>
-
-
-    <div class="footer-bottom">
-
-        <span>
-            © 2026 El Alemán
-        </span>
-
-        <span>
-            Camarón Enmantequillado
-        </span>
-
-    </div>
-
-</footer>
-
-
-<a
-    href="https://wa.me/526731340913"
-    class="whatsapp"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="WhatsApp">
-
-    WhatsApp
-
-</a>
-
-</body>
-</html>
-```
